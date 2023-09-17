@@ -24,23 +24,23 @@ public class Main {
     static String gradeCalc(double x) {
         if (x >= 92.0) {
             return ("A");
-        } else if (x < 92.0 && x >= 89.0) {
+        } else if ( x >= 89.0) {
             return ("A-");
-        } else if (x < 89.0 && x >= 87.0) {
+        } else if (x >= 87.0) {
             return ("B+");
-        } else if (x < 87.0 && x >= 82.0) {
+        } else if (x >= 82.0) {
             return ("B");
-        } else if (x < 82.0 && x >= 79.0) {
+        } else if (x >= 79.0) {
             return ("B-+");
-        } else if (x < 79.0 && x >= 77.0) {
+        } else if (x >= 77.0) {
             return ("C+");
-        } else if (x < 77.0 && x >= 72.0) {
+        } else if (x >= 72.0) {
             return ("C");
-        } else if (x < 72.0 && x >= 69.0) {
+        } else if (x >= 69.0) {
             return ("C-");
-        } else if (x < 69.0 && x >= 67.0) {
+        } else if (x >= 67.0) {
             return ("D+");
-        } else if (x < 67.0 && x >= 60.0) {
+        } else if (x >= 60.0) {
             return ("D");
         } else if (x < 60 && x > 0) {
             return ("F");
@@ -51,18 +51,18 @@ public class Main {
     //User Input
     static double inputGrade() {
         System.out.println("Please enter your grade: ");
-        double x = sc.nextDouble();
-        return x;
-
+        return sc.nextDouble();
     }
 
 // Main Method
+// Creates new variable 'y' and assigns its' value to the inputGrade() method.
+    // Creates new variable "grade" and the value of the method gradeCalc(y) is passed 'y' and assigned.
 //Do While loop to keep prompting user for grade.
     public static void main(String[] args) {
 
         do {
-            double x = inputGrade();
-            String grade = gradeCalc(x);
+            double y = inputGrade();
+            String grade = gradeCalc(y);
             System.out.println("Your letter grade is: " + grade);
             sc.nextLine();
         } while (true);
